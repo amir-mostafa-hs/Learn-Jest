@@ -60,3 +60,8 @@ test("There is no space , ! , # , & , @ , ? , $ , % in password", () => {
 test("is gmail?", () => {
   expect("amir.mostafa@gmail.com").toMatch(/(\W|^)[\w.+\-]*@gmail\.com(\W|$)/);
 });
+
+// test arrays item
+test("is array have undefined?", () => {
+  expect(["string", 1221, null, undefined]).toContain(undefined);
+});
