@@ -51,3 +51,12 @@ test("check the age is greater than 18", () => {
   const age = 18;
   expect(age).toBeGreaterThanOrEqual(18);
 });
+
+// Regex
+test("There is no space , ! , # , & , @ , ? , $ , % in password", () => {
+  expect("TestPass**++").not.toMatch(/[\s@#$!%?&]/);
+});
+
+test("is gmail?", () => {
+  expect("amir.mostafa@gmail.com").toMatch(/(\W|^)[\w.+\-]*@gmail\.com(\W|$)/);
+});
