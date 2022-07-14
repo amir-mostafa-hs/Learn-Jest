@@ -35,3 +35,19 @@ test("test the createUser function; pass 2 argument to this function and result 
     lastName,
   });
 });
+
+// check less than and greater than
+test("check the average is less than 20", () => {
+  expect(functions.checkTheAverage(10, 15, 18, 14, 20)).toBeLessThan(20);
+});
+
+test("check the number is less then or equal 2022", () => {
+  const num1 = 1200;
+  const num2 = 822;
+  expect(num1 + num2).toBeLessThanOrEqual(2022);
+});
+
+test("check the age is greater than 18", () => {
+  const age = 18;
+  expect(age).toBeGreaterThanOrEqual(18);
+});

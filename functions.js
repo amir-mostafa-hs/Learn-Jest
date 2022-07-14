@@ -7,6 +7,12 @@ const functions = {
       firstName,
       lastName,
     }),
+  checkTheAverage: (...numbers) => {
+    const sum = numbers.reduce((pre, cur) => {
+      return pre + cur;
+    });
+    return sum / numbers.length;
+  },
 };
 
 module.exports = functions;
