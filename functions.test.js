@@ -65,3 +65,11 @@ test("is gmail?", () => {
 test("is array have undefined?", () => {
   expect(["string", 1221, null, undefined]).toContain(undefined);
 });
+
+// testing async data
+test("User fetched should be Leanne Graham", () => {
+  expect.assertions(1);
+  return functions.feachUser().then((data) => {
+    expect(data.name).toEqual("Leanne Graham");
+  });
+});
