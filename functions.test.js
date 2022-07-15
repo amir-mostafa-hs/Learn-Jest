@@ -68,8 +68,16 @@ test("is array have undefined?", () => {
 
 // testing async data
 test("User fetched should be Leanne Graham", () => {
+  // promise
   expect.assertions(1);
-  return functions.feachUser().then((data) => {
+  return functions.fetchUser().then((data) => {
     expect(data.name).toEqual("Leanne Graham");
   });
+});
+
+test("User fetched should be Leanne Graham", async () => {
+  // async await
+  expect.assertions(1);
+  const data = await functions.fetchUser();
+  expect(data.name).toEqual("Leanne Graham");
 });
